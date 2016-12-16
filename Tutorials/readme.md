@@ -1,7 +1,7 @@
 # javascript-all-in-one  
 
 
-## var Hoisting
+## var Hoisting (JavaScript仅提升变量/函数声明，而不提升变量的初始化值。)
 
 ```codes
 (function() {
