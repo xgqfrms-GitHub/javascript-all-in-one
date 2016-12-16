@@ -6,7 +6,7 @@
 ```codes
 (function() {
   var foo = 1;
-  console(foo + " " + bar + " " + baz);
+  console.log(foo + " " + bar + " " + baz);
   var bar = 2;
   var baz = 3;
 })();
@@ -17,7 +17,7 @@
 var foo, bar, baz;
 (function() {
   foo = 1;
-  console(foo + " " + bar + " " + baz);
+  console.log(foo + " " + bar + " " + baz);
   // now bar, baz not be assigned any value, so it is === undefined !
   bar = 2;
   baz = 3;
@@ -25,6 +25,29 @@ var foo, bar, baz;
 // 1 undefined undefined 
 ``` 
 
+## Function Hoisting
 
+```codes
+foo();
+function foo() {
+  console.log("Hello!");
+}
+// Hello
+
+foo();
+var foo = function() {
+  console.log("Hello!");
+};
+// foo is not a function
+
+/*it equal to*/
+
+var foo;
+foo(); // foo was referenced before it be assigned value!
+foo = function() {
+  console.log("Hello!");
+};
+// foo is not a function
+``` 
 
 
